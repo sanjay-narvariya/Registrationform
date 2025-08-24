@@ -4,7 +4,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-
+ 
 export default function Enquiry() {
     const [enquiryList, setEnquiryList] = useState([]);
     const navigate = useNavigate();

@@ -8,7 +8,11 @@ const socketIo = require('socket.io');
 
 
 // built-in middlewares
-app.use(cors());
+app.use(cors({
+  origin: "*",  // agar sirf apna frontend allow karna ho to "https://your-frontend.onrender.com"
+  methods: ["GET","POST","PUT","DELETE"],
+  credentials: true
+}));
 app.use(express.json({ limit: "50mb" }));
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
